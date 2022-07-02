@@ -58,7 +58,7 @@ const App = () => {
         <div className={styles.rightSide}>
           <div className={styles.grid}>
             {levels.map((item, key) => (
-              <GridItem key={key} data={item} />
+              <GridItem key={key} item={item} />
             ))}
           </div>
         </div>
