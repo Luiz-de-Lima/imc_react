@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./App.module.css";
 import logo from "../src/assets/powered.png";
+import { levels, calculateImc } from "./helpers/imc";
 
 const App = () => {
   const [heightField, setHeightField] = useState(0);
@@ -15,13 +16,12 @@ const App = () => {
     setHeightField(value);
   };
 
-  const handleCalculateButton=()=>{
-    if(heightField && weightField){
-
-    }else{
-      alert('existem campos vazios, por favor preencher para prosseguir')
+  const handleCalculateButton = () => {
+    if (heightField && weightField) {
+    } else {
+      alert("existem campos vazios, por favor preencher para prosseguir");
     }
-  }
+  };
 
   return (
     <div className={styles.main}>
@@ -54,7 +54,9 @@ const App = () => {
           />
           <button onClick={handleCalculateButton}>Calcular</button>
         </div>
-        <div className={styles.rightSide}>...lado</div>
+        <div className={styles.rightSide}>
+          <div className={styles.grid}></div>
+        </div>
       </div>
     </div>
   );
