@@ -20,11 +20,10 @@ body {
 .container .leftSide {
   flex: 1;
   margin-right: 40px;
-  background-color: rgb(rgb(150, 143, 143));
 }
 
 .container .rightSide {
   flex: 1;
   margin-left: 40px;
-  background-color: rgb(rgb(114, 114, 122));
+
 }
